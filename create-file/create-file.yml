@@ -27,7 +27,7 @@
     yum: name=selinux-policy-devel state=latest
   
   - name: Setting up firewall rules
-    command: firewall-cmd --permanent --add-service=http && firewall-cmd --reload
+    command: firewall-cmd --permanent --add-service=http
    
   
   
