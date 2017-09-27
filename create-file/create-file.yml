@@ -14,6 +14,6 @@
     yum: name=httpd state=latest
   
   - name: Create index.html
-    shell: echo "Web is fucking working!" > /var/www/html/
+    shell: echo "Web is fucking working!" > /var/www/html/index.html
     
   
