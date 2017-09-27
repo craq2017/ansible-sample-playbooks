@@ -15,6 +15,9 @@
   
   - name: Create index.html
     shell: echo "Web is fucking working!" > /var/www/html/index.html
+  
+  - name: Restoring SELinux context
+    command: restorecon -RvF /var/www/
     
   - name: Starting Apache
     service: name=httpd state=started
