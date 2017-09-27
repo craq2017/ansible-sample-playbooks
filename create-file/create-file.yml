@@ -1,5 +1,4 @@
 ---
 - hosts: all
-  tasks:
-  command: touch /root/test-file
- 
+- name: Print current date
+      command: date
