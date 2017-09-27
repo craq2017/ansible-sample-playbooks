@@ -7,5 +7,13 @@
   - name: Hello World!
     shell: echo "Hi! Tower is working." > /root/hello-world
   
-  - name: yallo
+  - name: Create yallo in /tmp
     file: path=/tmp/yallo state=touch
+  
+  - name: Install Apache
+    yum: name=httpd state=latest
+  
+  - name: Create index.html
+    shell: echo "Web is fucking working!" > /var/www/html/
+    
+  
