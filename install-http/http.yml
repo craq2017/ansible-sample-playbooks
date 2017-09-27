@@ -1,0 +1,40 @@
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working." > /root/hello-world
+  
+  - name: Create yallo in /tmp
+    file: path=/tmp/yallo state=touch
+  
+  - name: Install Apache
+    yum: name=httpd state=latest
+  
+  - name: Create index.html
+    shell: echo "Web is fucking working!" > /var/www/html/index.html
+  
+  - name: Restoring SELinux context
+    command: restorecon -RvF /var/www/
+    
+  - name: Starting Apache
+    service: name=httpd state=started
+  
+  - name: Enabling Apache
+    service: 
+      name=httpd 
+      enabled=yes
+  - name: Installing SELinux policy devel
+    yum: name=selinux-policy-devel state=latest
+  
+  - name: Setting up firewall rules
+    command: firewall-cmd --permanent --add-service=http
+    
+  - name: Reloading firewall rules
+    command: firewall-cmd --reload
+   
+  
+  
+  
