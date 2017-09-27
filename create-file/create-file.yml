@@ -6,3 +6,6 @@
  
   - name: Hello World!
     shell: echo "Hi! Tower is working." > /root/file
+  
+  - name: yallo
+    file: path=/tmp/yallo state=touch
