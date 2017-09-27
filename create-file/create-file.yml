@@ -16,12 +16,8 @@
   - name: Create index.html
     shell: echo "Web is fucking working!" > /var/www/html/index.html
     
-  - service:
-    name: httpd
-    state: started
+  - name: Starting Apache
+    service: name=httpd state=started
   
-  - service:
-    name: httpd
-    enabled: yes
-    
+  
   
