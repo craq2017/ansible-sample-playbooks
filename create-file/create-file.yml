@@ -1,5 +1,8 @@
 ---
 - name: Create file
+  hosts: all
+
+- name: Create file
   command: touch /root/test-file
   args:
-creates: /root/test-file
+  creates: /root/test-file
