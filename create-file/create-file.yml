@@ -28,6 +28,9 @@
   
   - name: Setting up firewall rules
     command: firewall-cmd --permanent --add-service=http
+    
+  - name: Reloading firewall rules
+    command: firewall-cmd --reload
    
   
   
