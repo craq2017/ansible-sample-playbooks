@@ -1,7 +1,7 @@
 ---
+- hosts: all
 - name: create file
-  hosts: all
   tasks:
-    command: touch /root/test-file
-    args:
-    creates: /root/test-file
+  command: touch /root/test-file
+  args:
+  creates: /root/test-file
