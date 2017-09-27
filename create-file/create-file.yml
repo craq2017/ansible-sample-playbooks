@@ -20,7 +20,9 @@
     service: name=httpd state=started
   
   - name: Enabling Apache
-    service: name=httpd state=enabled
+    service: 
+      name=httpd 
+      enabled=yes
   
   
   
