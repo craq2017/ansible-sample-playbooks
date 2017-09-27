@@ -1,6 +1,5 @@
 ---
 - hosts: all
-- name: file
   tasks:
   command: touch /root/test-file
   args:
