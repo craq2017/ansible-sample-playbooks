@@ -19,5 +19,8 @@
   - name: Starting Apache
     service: name=httpd state=started
   
+  - name: Enabling Apache
+    service: name=httpd state=enabled
+  
   
   
