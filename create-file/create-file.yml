@@ -1,5 +1,5 @@
 ---
-- name: Create file
+- name: create file
   hosts: all
   tasks:
     command: touch /root/test-file
