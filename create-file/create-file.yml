@@ -1,6 +1,6 @@
 ---
 - hosts: all
-- name: create file
+- name: file
   tasks:
   command: touch /root/test-file
   args:
