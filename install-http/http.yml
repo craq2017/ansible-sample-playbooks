@@ -29,8 +29,14 @@
   - name: Installing SELinux policy devel
     yum: name=selinux-policy-devel state=latest
   
-  - name: Setting up firewall rules
+  - name: Setting up HTTP firewall rules
     command: firewall-cmd --permanent --add-service=http
+  
+  - name: Setting up HTTPS firewall rules
+    firewalld:
+      service: https
+      permanent: true
+      state: enabled
     
   - name: Reloading firewall rules
     command: firewall-cmd --reload
