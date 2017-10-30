@@ -1,0 +1,9 @@
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - nadddme: Hello World!
+    shdddell: echo "Hi! Tower is working." > /root/hello-world2
+  
+  
