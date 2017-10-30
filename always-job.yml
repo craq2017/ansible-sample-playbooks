@@ -1,0 +1,9 @@
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: This job will be executed anyway...
+    shell: echo "Meh...OK" > /root/always-job
+  
+ 
