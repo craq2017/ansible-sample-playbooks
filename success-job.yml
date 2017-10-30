@@ -1,0 +1,9 @@
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: This jon will be successful!
+    shell: echo "OK." > /root/success-job
+  
+  
